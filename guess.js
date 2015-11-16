@@ -1,17 +1,44 @@
+questions = ["How many punches does it take for One Punch Man to defeat his enemies?", "How many people does it take to screw in a lightbuld?", "Why is Geralt of Rivia so fresh?", "What color is the sky?", "What color is the snow?"];
 
+responses = ["That's right! Saitama can always beat his enemies with one punch!", "I would hope so", "That's right! Mutations and his natural charisma!", "Correct!", "Just don't eat it."];
+
+incorrect = ["Think carefully! Even if you have never read the manga or seen the show, you can still guess this! (Unless my code sucks)", "Let's just say one!", "Why he so fresh tho (Hint: Mutations)", "Might want to check your eyes for color blindness", "Hint: After you relieve yourself."];
+
+var el = document.getElementById('q1')
+el.textContent = questions[0];
+
+var el = document.getElementById('q2')
+el.textContent = questions[1];
+
+var el = document.getElementById('q3')
+el.textContent = questions[2];
+
+var el = document.getElementById('q4')
+el.textContent = questions[3];
+
+var el = document.getElementById('q5')
+el.textContent = questions[4];
 
 function gameStart () {
-	var answer = "one";
-	var guess = prompt("How many punches does it take for One Punch Man to defeat his enemies?")
-		if (guess == answer.toLowerCase() || guess == 1 || guess == "One") {
-			alert("That's right! Saitama can always beat his enemies with one punch!")
+	var q1 = prompt(questions[0]);
+	q1 = q1.toLowerCase();
+
+		if (q1 === "one" || q1 === "1") {
+			alert(responses[0])
+			var elQuestion = document.getElementById('a1');
+			elQuestion.textContent = q1;
+			var textContent = document.getElementById('img1');
+			var textContent = img1.innerHTML;
+			img1.innerHTML = '<div><img src="http://www.clipartbest.com/cliparts/dT6/okx/dT6okxEbc.png" alt ="burger" height="200" width="200"/></div>';
 			console.log("Test win")
 			gameEnd();
 		} 
 
 	else {
-		if (guess != answer && guess != 1) {
-			alert("Think carefully! Even if you have never read the manga or seen the show, you can still guess this! (Unless my code sucks)")
+		if (q1 != "one" && q1 != "1") {
+			alert(incorrect[0])
+			var elQuestion = document.getElementById('wrong1');
+			elQuestion.textContent = q1;
 			console.log("Test lose")
 			gameStart();
 		}
@@ -24,17 +51,25 @@ function gameEnd () {
 }
 
 function gameStart2 () {
-	var answer2 = "one";
-	var guess2 = prompt("How many people does it take to screw in a lightbuld?")
-		if (guess2 == answer2.toLowerCase() || guess2 == 1 || guess2 == "One") {
-			alert("I would hope so")
+	var q2 = prompt(questions[1]);
+	q2 = q2.toLowerCase();
+
+		if (q2 === "one" || q2 === "1") {
+			alert(responses[1])
+			var elQuestion = document.getElementById('a2');
+			elQuestion.textContent = q2;
+			var textContent = document.getElementById('img2');
+			var textContent = img2.innerHTML;
+			img2.innerHTML = '<div><img src="http://www.clipartbest.com/cliparts/dT6/okx/dT6okxEbc.png" alt ="burger" height="200" width="200"/></div>';
 			console.log("Test2 win")
 			gameEnd2();
 		} 
 
 	else {
-		if (guess2 != answer2 && guess2 != 1) {
-			alert("Let's just say one!")
+		if (q2 != "one" && q2 != "1") {
+			alert(incorrect[1])
+			var elQuestion = document.getElementById('wrong2');
+			elQuestion.textContent = q2;
 			console.log("Test2 lose")
 			gameStart2();
 		}
@@ -47,17 +82,25 @@ function gameEnd2 () {
 }
 
 function gameStart3 () {
-	var answer3 = "mutations";
-	var guess3 = prompt("Why is Geralt of Rivia so fresh?")
-		if (guess3 == answer3.toLowerCase() || answer3 == "Mutations" || answer3 == "mutations") {
-			alert("That's right! Mutations and his natural charisma!")
+	var q3 = prompt(questions[2]);
+	q3 = q3.toLowerCase();
+
+		if (q3 === "he just is" || q3 === "Mutations" || q3 === "mutations") {
+			alert(responses[2])
+			var elQuestion = document.getElementById('a3');
+			elQuestion.textContent = q3;
+			var textContent = document.getElementById('img3');
+			var textContent = img3.innerHTML;
+			img3.innerHTML = '<div><img src="http://www.clipartbest.com/cliparts/dT6/okx/dT6okxEbc.png" alt ="burger" height="200" width="200"/></div>';
 			console.log("Test3 win")
 			gameEnd3();
 		} 
 
 	else {
-		if (guess3 != answer3) {
-			alert("Why he so fresh tho (Hint: Mutations)")
+		if (q3 != "he just is" && q3 != "mutations") {
+			alert(incorrect[2])
+			var elQuestion = document.getElementById('wrong3');
+			elQuestion.textContent = q3;
 			console.log("Test3 lose")
 			gameStart3();
 		}
@@ -70,17 +113,25 @@ function gameEnd3 () {
 }
 
 function gameStart4 () {
-	var answer4 = "blue";
-	var guess4 = prompt("What color is the sky?")
-		if (guess4 == answer4.toLowerCase() || guess4 == "Blue") {
-			alert("Correct!")
+	var q4 = prompt(questions[3])
+	q4 = q4.toLowerCase();
+
+		if (q4 === q4.toLowerCase() || q4 === "Blue") {
+			alert(responses[3])
+			var elQuestion = document.getElementById('a4');
+			elQuestion.textContent = q4;
+			var textContent = document.getElementById('img4');
+			var textContent = img4.innerHTML;
+			img4.innerHTML = '<div><img src="http://www.clipartbest.com/cliparts/dT6/okx/dT6okxEbc.png" alt ="burger" height="200" width="200"/></div>';
 			console.log("Test win")
 			gameEnd4();
 		} 
 
 	else {
-		if (guess4 != answer4) {
-			alert("Might want to check your eyes for color blindness")
+		if (q4 != "blue") {
+			alert(incorrect[3])
+			var elQuestion = document.getElementById('wrong4');
+			elQuestion.textContent = q4;
 			console.log("Test lose")
 			gameStart4();
 		}
@@ -93,17 +144,25 @@ function gameEnd4 () {
 }
 
 function gameStart5 () {
-	var answer5 = "yellow";
-	var guess5 = prompt("What color is the snow?")
-		if (guess5 == answer5.toLowerCase() || guess5 == "Yellow") {
-			alert("Just don't eat it.")
+	var q5 = prompt(questions[4]);
+	q5 = q5.toLowerCase();
+
+		if (q5 === q5.toLowerCase() || q5 === "Yellow") {
+			alert(responses[4])
+			var elQuestion = document.getElementById('a5');
+			elQuestion.textContent = q5;
+			var textContent = document.getElementById('img5');
+			var textContent = img5.innerHTML;
+			img5.innerHTML = '<div><img src="http://www.clipartbest.com/cliparts/dT6/okx/dT6okxEbc.png" alt ="burger" height="200" width="200"/></div>';
 			console.log("Test win")
 			gameEnd5();
 		} 
 
 	else {
-		if (guess5 != answer5) {
-			alert("Hint: After you relieve yourself.")
+		if (q5 != "yellow") {
+			alert(incorrect[4])
+			var elQuestion = document.getElementById('wrong5');
+			elQuestion.textContent = q5;
 			console.log("Test lose")
 			gameStart5();
 		}
